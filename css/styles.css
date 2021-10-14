@@ -16,7 +16,6 @@ ul {
 
 button {
     cursor: pointer;
-    border: 0px;
 }
 
 body {
@@ -149,7 +148,7 @@ body {
     margin-right: 30px;
 }
 .about-company-heading {
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 
     font-weight: 700;
     font-size: 14px;
@@ -202,8 +201,8 @@ body {
     margin-right: 30px;
 } 
 .our-team-list-heading {
-    margin-top: 30px;
-    margin-bottom: 10px;
+    padding-top: 30px;
+    padding-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
@@ -278,6 +277,7 @@ body {
     letter-spacing: 0.03em;
     background: #F5F4FA;
     color: var(--title-second-color);
+    border-color: transparent;
 }
 .button-filter:hover,
 .button-filter:focus {
@@ -293,13 +293,14 @@ body {
 }
 .projects-list .item {
     margin-bottom: 50px;
+    border-bottom: 1px solid #000000;
 }
 .projects-list .item:not(:last-child) {
     margin-right: 30px;
 }
 .projects-heading {
-    margin-top: 20px;
-    margin-bottom: 4px;
+    padding-top: 20px;
+    padding-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -307,7 +308,7 @@ body {
     color: var(--first-color);
 }
 .projects-text {
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
