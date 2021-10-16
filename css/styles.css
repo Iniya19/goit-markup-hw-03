@@ -31,7 +31,7 @@ body {
     --title-second-color: #000000;
     --buttom-text-color: white;
   }
-  .container {
+.container {
       width: 1200px;
       padding-left: 15px;
       padding-right: 15px;
@@ -45,8 +45,7 @@ body {
 .header-main {
     display: flex;
     align-items:center;
-    justify-content:space-around;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #ECECEC;
 }
 .logo {
     display: block;
@@ -70,23 +69,27 @@ body {
 }
 .site-nav {
     display: flex;
+}
+.site-nav-item {
     font-weight: 500;
     font-size: 14px;
     line-height: 1,14;
     letter-spacing: 0.02em; 
     list-style-type: none;   
 }
-.site-nav .item:not(:last-child){
+.site-nav-item:not(:last-child) {
     margin-right: 50px;
 }
 .header-contacts {
     display: flex;
-    margin-left: auto;
+    margin-left: auto;   
+}
+.header-contacts .item {
     font-weight: 500;
     font-size: 14px;
     line-height: 1,14;
     letter-spacing: 0.02em; 
-    list-style-type: none;   
+    list-style-type: none;
 }
 .header-contacts .item + .item{
     margin-left: 50px;
@@ -140,17 +143,20 @@ body {
     border-radius: 4px;
     padding: 10px 32px;
     min-width: 200px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /*about-company*/
 .visually-hidden {
-    visibility: hidden;
-    pointer-events: none;
-    position: absolute;
-}
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+ }
 .about-company-list {
     display: flex;
 }
-.about-company-list .item:not(:last-child){
+.about-company-item:not(:last-child){
     margin-right: 30px;
 }
 .about-company-heading {
@@ -185,7 +191,7 @@ body {
 .our-work-list {
     display: flex;
 }
-.our-work-list .item:not(:last-child){
+.our-work-item:not(:last-child){
     margin-right: 30px;
 } 
 /*our-team*/
@@ -204,12 +210,13 @@ body {
 .our-team-list {
     display: flex; 
 }
-.our-team-list .item {
+.our-team-item {
     background-color: #fff;
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
-.our-team-list .item:not(:last-child){
+.our-team-item:not(:last-child){
     margin-right: 30px;
 } 
 .our-team-list-heading {
@@ -245,7 +252,7 @@ body {
 .adress {
     font-style: normal;
 }
-.adress-list .item:not(:last-child) {
+.adress-item:not(:last-child) {
     margin-bottom: 9px;
 }
 .adress-map {
@@ -270,7 +277,7 @@ body {
     justify-content: center;
     margin-bottom: 50px;
 }
-.button-list .item:not(:last-child) {
+.button-item:not(:last-child) {
     margin-right: 8px;
 }
 .button-filter {
@@ -293,17 +300,18 @@ body {
 .button-filter:focus {
     color: var(--buttom-text-color);
     background-color: var(--title-first-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*projects*/
 .projects-list {
     display: flex;
     flex-wrap: wrap;
 }
-.projects-list .item {
-    margin-bottom: 30px;}
+.projects-item:not(:nth-child(3n)) {
+    margin-right: 30px;}
 
-.projects-list .item:not(:last-child) {
-    margin-right: 30px;
+.projects-item:not(:nth-last-child(-n+3)) {
+    margin-bottom: 30px;
 }
 .projects-card {
     padding: 24px 20px;
